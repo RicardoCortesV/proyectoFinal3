@@ -1,0 +1,224 @@
+.header {
+  grid-area: header;
+  background-image: url(../images/mainBG.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.header-2 {
+  grid-area: header;
+  background-image: url(../images/bkg-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.nav-link {
+  color: #ffe4c4 !important; }
+
+.nav-item {
+  margin-right: 2rem;
+  list-style: none; }
+  .nav-item a {
+    text-decoration: none;
+    color: #ffe4c4; }
+  .nav-item:hover {
+    transform: scale(1.2); }
+
+.navF-item {
+  margin-right: 2rem;
+  list-style: none; }
+  .navF-item a {
+    text-decoration: none; }
+  .navF-item:hover {
+    transform: scale(1.2); }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #210909; }
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 30% auto 100px;
+  grid-template-areas: "header" "main" "footer"; }
+
+.grid-container-pages {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 150px auto 100px;
+  grid-template-areas: "header" "main" "footer"; }
+
+.video {
+  width: 400px;
+  margin: 10px;
+  background-color: #480e0e;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+.prod-container {
+  text-align: center;
+  color: #ffe4c4;
+  margin: 40px 5%; }
+
+.prod-container-nosotros {
+  text-align: center;
+  color: #ffe4c4; }
+
+.prod-container-valores {
+  text-align: center;
+  color: #ffe4c4;
+  margin-top: 40px; }
+
+.sub-txt {
+  margin: auto;
+  width: 80%; }
+
+.card, .valor-card, .item {
+  width: 250px;
+  color: #ffe4c4;
+  background-color: #480e0e;
+  display: inline-block;
+  margin: 10px; }
+
+.valor-card {
+  height: 250px; }
+  .valor-card img {
+    width: 220px;
+    height: 180px;
+    padding: 10px; }
+
+.valor-txt {
+  font-size: 22px; }
+
+.item {
+  height: 350px; }
+  .item img {
+    width: 220px;
+    height: 180px;
+    padding: 10px; }
+
+.item__btn {
+  width: 60%;
+  height: auto;
+  background-color: #7fffd4;
+  background: linear-gradient(0deg, #2dadb2 0%, #46f5ee 100%);
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5px 0;
+  color: #480e0e;
+  font-weight: bolder; }
+  .item__btn:hover {
+    transform: scale(1.2);
+    background-color: #fbf7ce;
+    color: #480e0e; }
+  .item__btn a {
+    text-decoration: none; }
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px; }
+
+.descripcion {
+  padding: 0 5px; }
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.redSocial-face {
+  color: #f4f4f9; }
+
+.redSocial-twitter {
+  color: #0095ff; }
+
+.redSocial-email {
+  color: #ffdd00; }
+
+.header,
+.main,
+.navbar,
+.footer {
+  padding: 10px; }
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  color: #ffe4c4; }
+
+.footer {
+  grid-area: footer;
+  border-top: 1px red solid; }
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.logo {
+  margin-right: auto;
+  margin-left: 2rem; }
+
+.text {
+  text-align: left;
+  font-size: 15px; }
+
+/* --------*************--media querys--************------- */
+/* -----break-mobile inicio---- */
+@media screen and (max-width: 768px) {
+  .logo {
+    display: none; }
+  .amaranto img {
+    width: 100%; }
+  .art img {
+    width: 190px;
+    height: auto; }
+  .prod-container-valores {
+    text-align: center;
+    color: #ffe4c4;
+    display: flex;
+    flex-direction: column; }
+  .prod-container-nosotros iframe {
+    width: 320px; }
+  .video {
+    width: 300px; }
+  .video iframe {
+    width: auto; } }
+
+/* -----break-mobile fin---- */
+/* -------break-tablet-desktop inicio------- */
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "header  header" "main main" "footer  footer"; }
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center; }
+  .videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+/* -------break-tablet-desktop fin------- */

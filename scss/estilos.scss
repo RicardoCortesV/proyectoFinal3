@@ -1,6 +1,6 @@
 
 @import "variables";
-@import "header";
+@import "header"; 
 
 * {
     box-sizing: border-box;
@@ -57,13 +57,19 @@ body {
 
 .prod-container {
     @include textos(center,$txtsEnGral);
-    margin: 0 5%;
+    margin: 40px 5%;
 }
 .prod-container-nosotros {
     @include textos(center,$txtsEnGral);
 }
 .prod-container-valores {
     @include textos(center,$txtsEnGral);
+    margin-top: 40px;
+}
+
+.sub-txt{
+    margin: auto;
+    width: 80%;
 }
 
 .card {
