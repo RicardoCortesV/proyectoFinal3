@@ -1,0 +1,270 @@
+
+@import "variables";
+@import "header";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #210909;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 30% auto 100px;
+    grid-template-areas:
+
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+
+.grid-container-pages {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 150px auto 100px;
+    grid-template-areas:
+
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.video{
+    width: 400px;
+    margin: 10px;
+    background-color: $guinda-claro;
+    font-size:18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin textos ($centrado, $color){
+    text-align: $centrado;
+    color: $color;
+}
+
+.prod-container {
+    @include textos(center,$txtsEnGral);
+    margin: 0 5%;
+}
+.prod-container-nosotros {
+    @include textos(center,$txtsEnGral);
+}
+.prod-container-valores {
+    @include textos(center,$txtsEnGral);
+}
+
+.card {
+    width: 250px;
+    color: $txtsEnGral;
+    background-color: $guinda-claro;
+    display: inline-block;
+    margin: 10px; 
+}
+
+.valor-card {
+    @extend .card;
+    height: 250px;
+    img{
+        width: 220px;
+        height: 180px;
+        padding: 10px; 
+    }
+
+}
+
+.valor-txt {
+    font-size: 22px;
+}
+
+
+.item {
+    @extend .card;
+    height: 350px;
+    img{
+        width: 220px;
+        height: 180px;
+        padding: 10px;
+    }
+
+}
+
+.item__btn {
+    width: 60%;
+    height: auto;
+    background-color: #7fffd4;
+    background: linear-gradient(0deg, rgba(45,173,178,1) 0%, rgba(70,245,238,1) 100%);
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px 0;
+    color: $guinda-claro;
+    font-weight: bolder;
+    &:hover{
+        transform: scale(1.2);
+        background-color: #fbf7ce;
+        color: $guinda-claro;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.descripcion {
+    padding: 0 5px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+    
+
+$sociales:(
+    face: #f4f4f9,
+    twitter: #0095ff,
+    email: #ffdd00,
+);
+
+@each $red, $color in $sociales {
+    .redSocial-#{$red} {
+        color:$color;
+    }
+}
+
+
+.header,
+.main,
+.navbar,
+.footer {
+    padding: 10px;
+
+}
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    color: $txtsEnGral;
+}
+
+.footer {
+    grid-area: footer;
+    border-top: 1px red solid;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+
+.logo {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+
+.text{
+   text-align: left;
+   font-size: 15px;
+}
+
+
+
+
+/* --------*************--media querys--************------- */
+
+/* -----break-mobile inicio---- */
+
+@media screen and (max-width:768px) {
+    .logo {
+        display: none;
+    }
+
+    .amaranto img{
+        width: 100%;
+    }    
+
+    .art img {
+        width: 190px;
+        height: auto;
+    }
+    .prod-container-valores {
+        @include textos(center,$txtsEnGral);
+        display: flex;
+        flex-direction: column;
+    }
+    .prod-container-nosotros iframe{
+        width: 320px;
+    }
+    .video{
+        width: 300px;
+    }
+    .video iframe{
+        width: auto;
+    }
+
+
+}
+
+/* -----break-mobile fin---- */
+
+
+/* -------break-tablet-desktop inicio------- */
+
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-areas:
+            "header  header"
+            "main main"
+            "footer  footer"
+        ;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .videos{
+   
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+
+}
+
+/* -------break-tablet-desktop fin------- */

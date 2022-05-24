@@ -1,0 +1,50 @@
+.header {
+    grid-area: header;
+    background-image: url(../images/mainBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.header-2 {
+    grid-area: header;
+    background-image: url(../images/bkg-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-link {
+    color: #ffe4c4 !important;
+}
+
+.nav-item {
+    margin-right: 2rem;
+    list-style: none;
+    a{
+        text-decoration: none;
+        color: #ffe4c4; 
+    }
+    &:hover{
+        transform: scale(1.2);
+    }
+    
+}
+
+.navF-item {
+    margin-right: 2rem;
+    list-style: none;
+  
+        a{
+            text-decoration: none;
+        }
+        &:hover{
+            transform: scale(1.2); 
+        }
+}
