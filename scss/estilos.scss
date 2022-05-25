@@ -40,7 +40,7 @@ body {
 }
 
 .video{
-    width: 400px;
+    width: $ancho + 180;
     margin: 10px;
     background-color: $guinda-claro;
     font-size:18px;
@@ -73,7 +73,7 @@ body {
 }
 
 .card {
-    width: 250px;
+    width: $ancho + 30;
     color: $txtsEnGral;
     background-color: $guinda-claro;
     display: inline-block;
@@ -84,7 +84,7 @@ body {
     @extend .card;
     height: 250px;
     img{
-        width: 220px;
+        width: $ancho;
         height: 180px;
         padding: 10px; 
     }
@@ -100,7 +100,7 @@ body {
     @extend .card;
     height: 350px;
     img{
-        width: 220px;
+        width: $ancho;
         height: 180px;
         padding: 10px;
     }
@@ -217,7 +217,7 @@ $sociales:(
     }    
 
     .art img {
-        width: 190px;
+        width: $ancho - 30;
         height: auto;
     }
     .prod-container-valores {
@@ -226,10 +226,10 @@ $sociales:(
         flex-direction: column;
     }
     .prod-container-nosotros iframe{
-        width: 320px;
+        width: $ancho + 100;
     }
     .video{
-        width: 300px;
+        width: $ancho + 80;
     }
     .video iframe{
         width: auto;
